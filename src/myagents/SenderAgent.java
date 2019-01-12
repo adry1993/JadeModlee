@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+
+/**
+ * Created by hamza on 26/12/16.
+ */
 public class SenderAgent extends Agent {
     protected void setup() {
 
@@ -34,7 +38,7 @@ public class SenderAgent extends Agent {
                             MessageTemplate.or(
                                     MessageTemplate.MatchPerformative(ACLMessage.CONFIRM),
                                     MessageTemplate.MatchPerformative(ACLMessage.REQUEST)));
-
+                    System.out.println("aquisi");
                     ACLMessage aclMessage = receive(messageTemplate);
                     if (aclMessage != null) {
                         switch (aclMessage.getPerformative()) {
@@ -48,8 +52,11 @@ public class SenderAgent extends Agent {
 
                                 break;
                         }
-                    } else
-                        block();
+                    } else{
+                       System.out.println("holo");
+                        block(); 
+                    }
+                        
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();

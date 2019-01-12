@@ -23,10 +23,14 @@ import org.jdom2.input.SAXBuilder;
 import org.jdom2.xpath.XPathExpression;
 import org.jdom2.xpath.XPathFactory;
 
+/**
+ * Created by hamza on 26/12/16.
+ */
 public class MoodleAgent extends Agent {
     private int cmp;
 
     protected void setup() {
+        System.out.println("holo");
         System.out.println("MoodleAgant: My name is " + getLocalName());
 
 
@@ -78,8 +82,9 @@ public class MoodleAgent extends Agent {
     protected String getCourses() throws ProtocolException, IOException {
 
         /// NEED TO BE CHANGED
-        String token = "52a731e5add6f03878a2dfe84512c072";
-        String domainName = "http://localhost";
+   String token = "282dfe075d9b6e72aa4c788cb82e3db1";
+        String domainName = "http://localhost"; 
+
 
         /// REST RETURNED VALUES FORMAT
         String restformat = "json"; //Also possible in Moodle 2.2 and later: 'json'
