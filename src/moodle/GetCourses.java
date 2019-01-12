@@ -1,4 +1,11 @@
-
+/*
+ * This file is NOT a part of Moodle - http://moodle.org/
+ *
+ * This client for Moodle 2 is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ */
 package moodle;
 
 import java.io.*;
@@ -22,6 +29,12 @@ import org.jdom2.xpath.XPathExpression;
 import org.jdom2.xpath.XPathFactory;
 
 
+/**
+ * REST MOODLE Client
+ * It's very basic. You'll have to write the JavaObject2POST code.
+ *
+ * @author Jerome Mouneyrac jerome@moodle.com
+ */
 public class GetCourses {
 
     /**
@@ -31,8 +44,9 @@ public class GetCourses {
     public static void main(String[] args) throws ProtocolException, IOException {
 
         /// NEED TO BE CHANGED
-        String token = "52a731e5add6f03878a2dfe84512c072";
-        String domainName = "http://localhost";
+      String token = "282dfe075d9b6e72aa4c788cb82e3db1";
+        String domainName = "http://localhost"; 
+
 
         /// REST RETURNED VALUES FORMAT
         String restformat = "xml"; //Also possible in Moodle 2.2 and later: 'json'
